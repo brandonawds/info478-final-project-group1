@@ -25,6 +25,11 @@ The first dataset from the CDC was collected from the U.S. Census Bureau, who la
 
 The Reddit Mental Health Dataset contains posts from 28 subreddits (15 mental health support groups) from 2018-2020. This dataset is accessible on Zendo.org and was collected from an observational study that used natural language processing to reveal vulnerable mental health support groups and heightened health anxiety on Reddit during Covid-19. 
 
+**Dataset Links:**
+
+- https://data.cdc.gov/NCHS/Indicators-of-Anxiety-or-Depression-Based-on-Repor/8pt5-q6wp
+- https://zenodo.org/record/3941387#.Yg2ME9_MI2w
+
 **Target Audience:**
 
 Who is your target audience? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should hone in on one of these audiences. 
