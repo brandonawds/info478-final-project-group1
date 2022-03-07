@@ -1,0 +1,53 @@
+---
+title: "Exploratory Analysis"
+output: html_document
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, include=FALSE}
+# Set up
+library(tidyverse)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(patchwork)
+source("distribution_of_variable_brandon.r")
+source("analysis_tiff.r")
+```
+By: Brandon Ly, Tiffany Tse, Meena Attringal, Fatin Almaroof
+
+## Distribution of Variables
+
+### Distribution of Depression Indicators
+```{r distribution of depression, warning=FALSE, echo=FALSE}
+plot(depression_by_state)
+
+```
+
+This graph showcases that indicators of Depression during the pandemic across the states in the USA. We can see that the ranges of indicators of depression ranges from 16 to 30, with most states falling in between 20 and 24. These values represent the the average number of indicators for depression among individuals. 14 States reported that their indicators of depression fell between 22 and 24. New York having the highest indicators of depression at 28.7, and Iowa being the lowest at 16.5. This could also be due to the population density of each state as well as the severity of COVID cases. 
+
+### Distribution of Anxierty Indicators
+```{r distribution of anxiety, warning=FALSE, echo=FALSE}
+plot(anxiety_disorder_histogam)
+```
+
+This graph shows that the states's anxiety indicator value falls between 20 to 40. Most states (16 states) have a value of 30 indicating an anxiety disorder when this data was collected from Apr 23 to May 5, 2020. The lowest value of anxiety indicators was North Dakota at 21.7 while the highest was Massachusetts at 37.
+
+## Relationships Between Variables
+
+### Covid-19 Status and Emotions
+```{r covid-19 status and emotions, warning=FALSE, echo=FALSE}
+barplot(finalTable, main="Covid19 Status Vs. Sad and Happy Rates (1-5 scale)",
+                               xlab="COVID19 Quarantine Status", col=c("darkblue","chocolate3"),
+                               legend = (c("Sad","Happy")), beside=TRUE, ylim = c(0,5))
+```
+
+The visual bar graph shows the relationship between COVID-19. Quarantine Status Vs.Sad and Happy rates on a scale of 1-5. We can see that the sad rates for Home Isolation and Hospitalization are much higher than the happy rates. This makes sense since both these cases often imply that the person probably has very limited interaction with other people during their quarantine period. While some asymptomatic individuals usually quarantine but not self isolate, their happy rates are higher. 
+
+### Average Indicators of Depression and Anxiety Across Phases of The Pandemic
+```{r mental health across phases, warning=FALSE, echo=FALSE}
+plot(g)
+```
+
+For this graph, we identified the average values collected for the first three phases of the CDC's testing of the mental health of their sample population. This data is based on a survey that was "designed to gauge the impact of the pandemic on employment status, consumer spending, food security, housing, education disruptions, and dimensions of physical and mental wellness." (CDC 2022). It shows that anxiety and mental health has only gotten worse throughout the pandemic.
+
+
