@@ -25,12 +25,12 @@ plot(depression_by_state)
 
 This graph showcases that indicators of Depression during the pandemic across the states in the USA. We can see that the ranges of indicators of depression ranges from 16 to 30, with most states falling in between 20 and 24. These values represent the the average number of indicators for depression among individuals. 14 States reported that their indicators of depression fell between 22 and 24. New York having the highest indicators of depression at 28.7, and Iowa being the lowest at 16.5. This could also be due to the population density of each state as well as the severity of COVID cases. 
 
-### Distribution of Anxierty Indicators
+### Distribution of Anxiety Indicators
 ```{r distribution of anxiety, warning=FALSE, echo=FALSE}
 plot(anxiety_disorder_histogam)
 ```
 
-This graph shows that the states's anxiety indicator value falls between 20 to 40. Most states (16 states) have a value of 30 indicating an anxiety disorder when this data was collected from Apr 23 to May 5, 2020. The lowest value of anxiety indicators was North Dakota at 21.7 while the highest was Massachusetts at 37.
+This graph shows the percentage of people experiencing anxiety indicators during the first phase of survey record taking (April 23-May 5, 2020). It is categorized by states in the US. From the histogram, we can see most states have about 20 to 40% of their population show symptoms of anxiety during this time period Most states (16 states) showed that 30% of their population indicated an anxiety disorder. The state with the lowest percentage of their population indicating symptoms of anxiety was  North Dakota at 21.7% while the highest was Massachusetts at 37% of the population.
 
 ## Relationships Between Variables
 
