@@ -11,7 +11,7 @@ library(knitr)
 library(ggplot2)
 library(patchwork)
 source("distribution_of_variable_brandon.r")
-source("analysis_tiff.r")
+source("analysis_tiff.R")
 ```
 By: Brandon Ly, Tiffany Tse, Meena Attringal, Fatin Almaroof
 

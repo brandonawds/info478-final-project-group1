@@ -8,8 +8,10 @@
 #
 
 library(shiny)
+library(rsconnect)
 source("brandon.R")
 source("fatin.R")
+source("distribution_of_variable_brandon.r")
 # Define UI for application that draws a histogram
 ui <- navbarPage("INFO 478 Final Project: Mental Health and Covid-19",
       tabPanel("Overview",
@@ -46,7 +48,7 @@ ui <- navbarPage("INFO 478 Final Project: Mental Health and Covid-19",
                          min = 1, max = 6, value = 1),
              h3("Phase Time Periods"),
              tableOutput("table"),
-             plotOutput("plot")
+             plotOutput("plot"),
              ),
     tabPanel("Conclusion and Insights",
              titlePanel("Conclusions and Insights"),
@@ -59,11 +61,14 @@ ui <- navbarPage("INFO 478 Final Project: Mental Health and Covid-19",
              h3("For both depression and anxiety, we can see from the graphs that the percentage of survey respondents who indicated symptoms of these mental disorders remained relatively consistent throughout. 
                 About 16-18% percent of the survey respondents who do not have a disability showed indications for depression (the red line) throughout the data collection time period. While about 46-54% of survey respondents who have a disability showed indications for depression (blue line).
                 About 20-25% percent of the survey respondents who do not have a disability showed indications for anxiety (the red line) throughout the data collection time period. While about 50-58% of survey respondents who have a disability showed indications for anxiety (blue line).
-                There is a notable drop in percentage of survey respondents with a disability and indicate either mental disorder (anxiety or depression) during the middle of the data collection period (Summer 2022, June-July)."),
+                There is a notable drop in percentage of survey respondents with a disability and indicate either mental disorder (anxiety or depression) during the middle of the data collection period (Summer 2022, June-July). Overall, we can observe that people with disabilities are suffering from mental health disorders at a much higher rate than those without disabilities"),
              h2("Limitations"),
              h3("A limitation that the survey's technical documentation covered is the nonresponse bias. Some of those who received this email about this survey did not fill it out, potentially skewing some results. Some Americans may not own a device that can access the internet, may not have internet, or may not have an email account."),
              h1("Mental Health Through the Phases of the Pandemic"),
-             h2("ANALYSIS")
+             h2("The above visual correlates to the percentage of cases that reported mental disorders in each phase of Covid. Firstly, what we found helpful that we were able to divide the data set based on timeline to 6 different phases. Within each of these phase we were able to analyze the percentile of mental health disorders reported. While we didn't want to expand the variables too much with analysis for each separate mental health disorder, we decided to keep it concise and combine all mental disorders into different phases and find the average for each of these phases.
+By doing this we found that the most health disorders reported was during phase 3 and the least was during phase 4. What we found surprising was that the least and greatest reporting of health disorders occurred in consecutive phases. However, this does make reasonable sense when correlating this data in terms of how strict the government was while enforcing quarantine restrictions. 
+When there is more enforcement to quarantine, individuals tend to socialize less and be more isolated and alone at home. This ties in with the high mental health disorder reporting rates. Once the government strictly enforces Covid restrictions, the Covid rates ultimately decrease as well. Therefore, once the ban for such resurrections is taken people tend to socialize and go out far more, reverting back to their normal lifestyle. This ultimately ties in with the data that shows the phase 4 as being the lowest percentile phase for reporting health disorders.
+Overall, this shows a strong correlation with the percentile of mental disorder cases reported and the kind of social lifestyle that users are redirected to be put in.  ")
              )
     
 )
@@ -104,3 +109,4 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+deployApp(appName="info478final")
