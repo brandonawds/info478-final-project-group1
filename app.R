@@ -59,7 +59,7 @@ ui <- navbarPage("INFO 478 Final Project: Mental Health and Covid-19",
              h3("For both depression and anxiety, we can see from the graphs that the percentage of survey respondents who indicated symptoms of these mental disorders remained relatively consistent throughout. 
                 About 16-18% percent of the survey respondents who do not have a disability showed indications for depression (the red line) throughout the data collection time period. While about 46-54% of survey respondents who have a disability showed indications for depression (blue line).
                 About 20-25% percent of the survey respondents who do not have a disability showed indications for anxiety (the red line) throughout the data collection time period. While about 50-58% of survey respondents who have a disability showed indications for anxiety (blue line).
-                There is a notable drop in percentage of survey respondents with a disability and indicate either mental disorder (anxiety or depression) during the middle of the data collection period (Summer 2022, June-July)."),
+                There is a notable drop in percentage of survey respondents with a disability and indicate either mental disorder (anxiety or depression) during the middle of the data collection period (Summer 2021, June-July)."),
              h2("Limitations"),
              h3("A limitation that the survey's technical documentation covered is the nonresponse bias. Some of those who received this email about this survey did not fill it out, potentially skewing some results. Some Americans may not own a device that can access the internet, may not have internet, or may not have an email account."),
              h1("Mental Health Through the Phases of the Pandemic"),
